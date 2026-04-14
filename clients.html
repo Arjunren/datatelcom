@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatelcom System Communication - Our Clients</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <section class="relative flex flex-col items-center bg-gradient-to-b from-slate-950 via-slate-900 to-blue-950 flex-grow pb-24">
+        
+        <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridPatternBg.svg" 
+             alt="Background pattern" 
+             class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-screen">
+
+        <header
+            class="fixed top-0 left-0 w-full z-[100] bg-slate-950/60 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+            <nav class="flex items-center justify-between px-6 md:px-12 lg:px-24 py-5 max-w-screen-2xl mx-auto w-full">
+                <a href="https://datatelcom.pythonanywhere.com"
+                    class="text-2xl font-bold text-white tracking-wide z-50 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="5" cy="12" r="2" stroke-width="2" />
+                            <circle cx="19" cy="5" r="2" stroke-width="2" />
+                            <circle cx="19" cy="19" r="2" stroke-width="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 12h10M17 7l-6 4 6 4" />
+                        </svg>
+                    </div>
+                    Datatelcom
+                </a>
+
+                <div id="menu"
+                    class="fixed inset-0 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 text-lg font-medium opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-40 translate-y-4
+                           md:translate-y-0 md:static md:bg-transparent md:backdrop-blur-none md:flex-row md:opacity-100 md:pointer-events-auto md:p-0 md:text-sm md:justify-end md:w-auto">
+
+                    <a href="./index.html"
+                        class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Home</a>
+                    <a href="./services.html"
+                        class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Services</a>
+                    <a href="./software.html"
+                        class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Software</a>
+                    <a href="./clients.html"
+                        class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Clients</a>
+                    <a href="./contact.html"
+                        class="text-white bg-white/10 hover:bg-white/20 px-5 py-2 rounded-full transition-all border border-white/5">Contact
+                        Us</a>
+
+                    <button id="close-menu"
+                        class="absolute top-6 right-6 md:hidden bg-slate-800/50 border border-slate-700 hover:bg-slate-700 text-white p-2.5 rounded-full aspect-square transition"
+                        aria-label="Close Menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <button id="open-menu"
+                    class="md:hidden bg-slate-800/80 border border-slate-700/50 hover:bg-slate-700 text-white p-2 rounded-lg aspect-square transition z-50"
+                    aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 12h16" />
+                        <path d="M4 18h16" />
+                        <path d="M4 6h16" />
+                    </svg>
+                </button>
+            </nav>
+        </header>
+
+        <main class="relative z-10 flex flex-col items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 md:mt-40">
+            
+            <div class="text-center animate-fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-semibold uppercase tracking-widest rounded-full mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    Our Valued Clients
+                </div>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-semibold text-white max-w-3xl text-center leading-tight tracking-tight mb-6">
+                Trusted by Industry Leaders Nationwide.
+            </h1>
+            <p class='text-base md:text-lg text-gray-300 max-w-2xl text-center mb-16'>
+                At DatatelCom, our clients are at the heart of everything we do. We are committed to delivering tailored communication solutions that exceed expectations and create lasting value.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+                
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h6"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded uppercase">Hotel</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Eurotel</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A hotel chain in the Philippines offering comfortable accommodations at affordable rates.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 9-5-9-5-9 5 9 5z"/><path d="m12 14 6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"/><path d="m12 14 9-5-9-5-9 5 9 5Zm0 0v6.5"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded uppercase">Government</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>COMELEC</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>An independent constitutional body responsible for enforcing and administering all election laws.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><path d="M4 12h16"/><path d="M12 4v16"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded uppercase">Government</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Dept. Of Transportation</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A government agency responsible for ensuring the development of PH transportation systems.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-purple-300 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded uppercase">Infrastructure</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Metro Pacific</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>Metro Pacific Investments Corporation (MPIC) is a major infrastructure investment firm in the Philippines.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h6"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded uppercase">Hotel</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Sogo Hotel</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A well-known budget hotel chain in the Philippines with branches across various key cities.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h6"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded uppercase">Hotel</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Atrium Hotel</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A premier hotel offering modern accommodations in key locations such as Manila and Pampanga.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h6"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded uppercase">Hotel</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Wow Hotel</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A modern hotel offering comfortable accommodations, convenient amenities, and exceptional services.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-amber-300 bg-amber-500/10 border border-amber-500/20 px-2 py-1 rounded uppercase">Public Service</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>MMDA</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>Manages traffic, flood control, waste management, and disaster response in Metro Manila.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded uppercase">Government</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>DENR</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A Philippine government agency responsible for managing and protecting the country's natural resources.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.7l-1.3 2.6c-.2.4-.1.9.3 1.2L9 14l-4 4-2.5-.5C2.1 17.4 1.7 17.6 1.5 18l-.5 1.5c-.2.5.3 1 .8.8L6 19.5l4-4 3.3 6.3c.3.4.8.5 1.2.3l2.6-1.3c.5-.2.8-.6.7-1.1Z"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-1 rounded uppercase">Government</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Civil Aviation Auth.</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>The government agency responsible for regulating and overseeing all civil aviation in the country.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-rose-300 bg-rose-500/10 border border-rose-500/20 px-2 py-1 rounded uppercase">Education</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>St. Mary's College</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A respected Catholic educational institution established in 1725 by the RVM Sisters.</p>
+                </div>
+
+                <div class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-6 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300 flex flex-col'>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="bg-blue-900/40 p-2.5 rounded-lg text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h6"/></svg>
+                        </div>
+                        <span class="text-[10px] font-semibold tracking-wider text-blue-300 bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded uppercase">Hotel</span>
+                    </div>
+                    <h3 class='font-semibold text-lg text-gray-100 mb-2'>Icon Hotel</h3>
+                    <p class='text-sm text-gray-400 leading-relaxed flex-grow'>A mid-range 3-star hotel in the Philippines that provides comfortable accommodations with modern amenities.</p>
+                </div>
+
+            </div>
+        </main>
+    </section>
+
+    <footer class="w-full bg-slate-950 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
+            <p>
+                <a href="https://datatelcom.pythonanywhere.com" class="text-white font-medium hover:text-blue-400 transition-colors">Datatelcom System Communication</a> © 2026. All rights reserved.
+            </p>
+            <div class="mt-4 md:mt-0 flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const closeMenu = document.getElementById('close-menu');
+        const openMenu = document.getElementById('open-menu');
+
+        function toggleMenu() {
+            // Toggle opacity and pointer events for a smooth fade-in overlay
+            menu.classList.toggle('opacity-0');
+            menu.classList.toggle('pointer-events-none');
+        }
+
+        openMenu.addEventListener('click', toggleMenu);
+        closeMenu.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>
