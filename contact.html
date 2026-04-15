@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Datatelcom System Communication for enterprise telecom and infrastructure support.">
+    <meta name="description"
+        content="Contact Datatelcom System Communication for enterprise telecom and infrastructure support.">
     <title>Datatelcom System Communication - Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -20,6 +21,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -31,49 +33,59 @@
             opacity: 0;
         }
 
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden flex flex-col min-h-screen selection:bg-blue-500/30">
+<body
+    class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden flex flex-col min-h-screen selection:bg-blue-500/30">
 
-    <section class="relative flex flex-col items-center bg-gradient-to-b from-slate-950 via-slate-900 to-blue-950 flex-grow pb-24">
+    <section
+        class="relative flex flex-col items-center bg-gradient-to-b from-slate-950 via-slate-900 to-blue-950 flex-grow pb-24">
 
-        <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridPatternBg.svg"
-            alt=""
+        <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridPatternBg.svg" alt=""
             aria-hidden="true"
             class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-screen">
 
-        <header class="fixed top-0 left-0 w-full z-[100] bg-slate-950/60 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
-            <nav class="flex items-center justify-between px-6 md:px-12 lg:px-24 py-5 max-w-screen-2xl mx-auto w-full">
-                <a href="https://datatelcom.pythonanywhere.com" class="text-2xl font-bold text-white tracking-wide z-50 flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <header
+            class="fixed top-0 left-0 w-full z-[100] bg-slate-950/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+            <nav class="flex items-center justify-between px-6 md:px-12 lg:px-24 py-4 max-w-screen-2xl mx-auto w-full">
+                <a href="https://datatelcom.pythonanywhere.com"
+                    class="text-2xl font-bold text-white tracking-wide z-50 flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="5" cy="12" r="2" stroke-width="2" />
+                            <circle cx="19" cy="5" r="2" stroke-width="2" />
+                            <circle cx="19" cy="19" r="2" stroke-width="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 12h10M17 7l-6 4 6 4" />
+                        </svg>
                     </div>
                     Datatelcom
                 </a>
 
-                <div id="menu"
-                    class="fixed inset-0 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 text-lg font-medium opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-40 translate-y-4
-                           md:translate-y-0 md:static md:bg-transparent md:backdrop-blur-none md:flex-row md:opacity-100 md:pointer-events-auto md:p-0 md:text-sm md:justify-end md:w-auto">
-
-                    <a href="./index.html" class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Home</a>
-                    <a href="./services.html" class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Services</a>
-                    <a href="./software.html" class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Software</a>
-                    <a href="./clients.html" class="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-2 rounded-full transition-all">Clients</a>
-                    <a href="./contact.html" class="text-white bg-white/10 hover:bg-white/20 px-5 py-2 rounded-full transition-all border border-white/5">Contact Us</a>
-
-                    <button id="close-menu" class="absolute top-6 right-6 md:hidden bg-slate-800/50 border border-slate-700 hover:bg-slate-700 text-white p-2.5 rounded-full aspect-square transition" aria-label="Close Menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 6 6 18" />
-                            <path d="m6 6 12 12" />
-                        </svg>
-                    </button>
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="./index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+                    <a href="./services.html" class="text-slate-300 hover:text-white transition-colors">Services</a>
+                    <a href="./software.html" class="text-slate-300 hover:text-white transition-colors">Software</a>
+                    <a href="./clients.html" class="text-slate-300 hover:text-white transition-colors">Clients</a>
+                    <a href="./contact.html"
+                        class="text-white bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full transition-all shadow-lg shadow-blue-500/20 ml-2">Contact
+                        Us</a>
                 </div>
 
-                <button id="open-menu" class="md:hidden bg-slate-800/80 border border-slate-700/50 hover:bg-slate-700 text-white p-2 rounded-lg aspect-square transition z-50" aria-label="Open Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <button id="open-menu"
+                    class="md:hidden bg-white/5 border border-white/10 hover:bg-white/10 text-white p-2.5 rounded-lg transition"
+                    aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 12h16" />
                         <path d="M4 18h16" />
                         <path d="M4 6h16" />
@@ -82,70 +94,155 @@
             </nav>
         </header>
 
-        <main class="relative z-10 flex flex-col items-center w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 md:mt-40">
-            
+        <div id="mobile-menu-overlay"
+            class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[101] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
+        </div>
+
+        <aside id="mobile-menu-drawer"
+            class="fixed top-0 right-0 h-full w-[85vw] max-w-[360px] bg-slate-900 border-l border-white/5 z-[102] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden shadow-2xl">
+
+            <div class="flex items-center justify-between px-6 py-5 border-b border-white/5">
+                <span class="text-lg font-bold text-white tracking-wide">Menu</span>
+                <button id="close-menu"
+                    class="bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 p-2 rounded-full transition-colors aspect-square"
+                    aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-col px-6 py-8 gap-6 flex-1 overflow-y-auto">
+                <a href="./index.html"
+                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Home</a>
+                <a href="./services.html"
+                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Services</a>
+                <a href="./software.html"
+                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Software</a>
+                <a href="./clients.html"
+                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Clients</a>
+            </div>
+
+            <div class="p-6 border-t border-white/5 bg-slate-950/30">
+                <a href="./contact.html"
+                    class="flex justify-center items-center w-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-5 py-3.5 rounded-xl font-medium transition-all shadow-lg shadow-blue-500/25">
+                    Get in touch
+                </a>
+            </div>
+        </aside>
+
+        <main
+            class="relative z-10 flex flex-col items-center w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 md:mt-40">
+
             <div class="text-center animate-fade-up">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-semibold uppercase tracking-widest rounded-full mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-semibold uppercase tracking-widest rounded-full mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
                     <span class="relative flex h-2 w-2">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                     </span>
                     We are online
                 </div>
                 <h1 class="text-3xl md:text-5xl font-bold text-white pb-4 tracking-tight">Direct Support Channels</h1>
                 <p class="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed mb-12">
-                    Skip the wait times. Connect directly with our network engineers, technical support, or enterprise sales team through your preferred channel.
+                    Skip the wait times. Connect directly with our network engineers, technical support, or enterprise
+                    sales team through your preferred channel.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full animate-fade-up delay-100">
-                
-                <div class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+
+                <div
+                    class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-1">Email Support</h3>
                     <p class="text-sm text-slate-400 mb-6">For general inquiries and technical assistance.</p>
-                    <div class="mt-auto w-full flex items-center justify-between bg-slate-950/50 border border-slate-700 rounded-lg p-3">
-                        <span id="copy-email-text" class="text-slate-200 text-sm font-medium truncate pr-2">datatelcom.customercare@gmail.com</span>
-                        <button onclick="handleCopy('copy-email-text', this)" class="p-1.5 hover:bg-blue-600 hover:text-white rounded-md transition-colors text-slate-400" aria-label="Copy Email">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <div
+                        class="mt-auto w-full flex items-center justify-between bg-slate-950/50 border border-slate-700 rounded-lg p-3">
+                        <span id="copy-email-text"
+                            class="text-slate-200 text-sm font-medium truncate pr-2">datatelcom.customercare@gmail.com</span>
+                        <button onclick="handleCopy('copy-email-text', this)"
+                            class="p-1.5 hover:bg-blue-600 hover:text-white rounded-md transition-colors text-slate-400"
+                            aria-label="Copy Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
                         </button>
                     </div>
                 </div>
 
-                <div class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <div
+                    class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-1">Direct Line</h3>
                     <p class="text-sm text-slate-400 mb-6">Call us directly for urgent technical resolutions.</p>
-                    <div class="mt-auto w-full flex items-center justify-between bg-slate-950/50 border border-slate-700 rounded-lg p-3">
-                        <span id="copy-phone-text" class="text-slate-200 text-sm font-medium truncate pr-2">+63 (123) 456-7890</span>
-                        <button onclick="handleCopy('copy-phone-text', this)" class="p-1.5 hover:bg-blue-600 hover:text-white rounded-md transition-colors text-slate-400" aria-label="Copy Phone">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <div
+                        class="mt-auto w-full flex items-center justify-between bg-slate-950/50 border border-slate-700 rounded-lg p-3">
+                        <span id="copy-phone-text" class="text-slate-200 text-sm font-medium truncate pr-2">+63 0917
+                            924 1546</span>
+                        <button onclick="handleCopy('copy-phone-text', this)"
+                            class="p-1.5 hover:bg-blue-600 hover:text-white rounded-md transition-colors text-slate-400"
+                            aria-label="Copy Phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
                         </button>
                     </div>
                 </div>
 
-                <div class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <div
+                    class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-1">Corporate Headquarters</h3>
                     <p class="text-sm text-slate-400 mb-4">Visit us for enterprise consultations.</p>
                     <p class="mt-auto text-slate-200 text-sm font-medium">Taguig City, Metro Manila<br>Philippines</p>
                 </div>
 
-                <div class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div
+                    class="group bg-slate-900/60 border border-slate-700/50 hover:border-blue-500/50 hover:bg-slate-800/80 rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm flex flex-col items-start shadow-lg">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-1">Business Hours</h3>
                     <p class="text-sm text-slate-400 mb-4">When our core team is available.</p>
                     <div class="mt-auto w-full space-y-2 text-sm font-medium">
-                        <div class="flex justify-between text-slate-200"><span>Monday - Friday</span> <span>9:00 AM - 6:00 PM</span></div>
-                        <div class="flex justify-between text-slate-400"><span>Weekend</span> <span>Support Ticket Only</span></div>
+                        <div class="flex justify-between text-slate-200"><span>Monday - Friday</span> <span>9:00 AM -
+                                5:00 PM</span></div>
+                        <div class="flex justify-between text-slate-400"><span>Weekend</span> <span> Sabbath </span></div>
                     </div>
                 </div>
 
@@ -154,11 +251,13 @@
     </section>
 
     <footer class="w-full bg-slate-950 border-t border-slate-800/50 mt-auto relative z-10">
-        <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400 gap-4">
+        <div
+            class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400 gap-4">
             <p>
-                <a href="https://datatelcom.pythonanywhere.com" class="text-slate-200 font-semibold hover:text-blue-400 transition-colors">
+                <a href="https://datatelcom.pythonanywhere.com"
+                    class="text-slate-200 font-semibold hover:text-blue-400 transition-colors">
                     Datatelcom System Communication
-                </a> 
+                </a>
                 &copy; 2026. All rights reserved.
             </p>
             <div class="flex gap-6 font-medium">
@@ -169,34 +268,16 @@
     </footer>
 
     <script>
-        const menu = document.getElementById('menu');
-        const closeMenu = document.getElementById('close-menu');
-        const openMenu = document.getElementById('open-menu');
-
-        // Toggle mobile menu
-        function toggleMenu() {
-            if (menu.classList.contains('opacity-0')) {
-                menu.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                menu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-            } else {
-                menu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-                menu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-            }
-        }
-
-        openMenu.addEventListener('click', toggleMenu);
-        closeMenu.addEventListener('click', toggleMenu);
-
         // Copy to clipboard logic for contact cards
         const handleCopy = (elementId, buttonElement) => {
             const copyText = document.getElementById(elementId).innerText;
-            
+
             navigator.clipboard.writeText(copyText).then(() => {
                 // Change styles to green to indicate success
                 buttonElement.classList.replace('text-slate-400', 'text-green-400');
                 buttonElement.classList.replace('hover:bg-blue-600', 'hover:bg-green-600');
                 buttonElement.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
-                
+
                 // Revert back after 2.5 seconds
                 setTimeout(() => {
                     buttonElement.classList.replace('text-green-400', 'text-slate-400');
@@ -205,6 +286,40 @@
                 }, 2500);
             });
         };
+
+        // --- MOBILE MENU DRAWER LOGIC ---
+        const openMenuBtn = document.getElementById('open-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const drawer = document.getElementById('mobile-menu-drawer');
+
+        // Function to open the drawer
+        function openMenu() {
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
+            drawer.classList.remove('translate-x-full');
+            drawer.classList.add('translate-x-0');
+        }
+
+        // Function to close the drawer
+        function closeMenu() {
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            drawer.classList.remove('translate-x-0');
+            drawer.classList.add('translate-x-full');
+        }
+
+        // Event Listeners
+        openMenuBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu); // Closes menu if user taps the dark background
+
+        // Optional: Close menu when clicking a link inside it
+        const mobileLinks = drawer.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
     </script>
 </body>
+
 </html>
