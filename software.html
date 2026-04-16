@@ -123,7 +123,6 @@
 
         <aside id="mobile-menu-drawer"
             class="fixed top-0 right-0 h-full w-[85vw] max-w-[360px] bg-slate-900 border-l border-white/5 z-[102] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden shadow-2xl">
-
             <div class="flex items-center justify-between px-6 py-5 border-b border-white/5">
                 <span class="text-lg font-bold text-white tracking-wide">Menu</span>
                 <button id="close-menu"
@@ -188,8 +187,9 @@
                     <option value="hms">Hotel Management System</option>
                 </select>
                 <div class="pointer-events-none absolute inset-y-0 right-8 flex items-center text-blue-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m6 9 6 6 6-6" />
                     </svg>
                 </div>
             </div>
@@ -222,21 +222,29 @@
                     </p>
                 </div>
 
-                <div class="w-full max-w-5xl mx-auto mb-20 relative px-2 sm:px-0">
+                <div class="w-full max-w-5xl mx-auto mb-16 relative px-2 sm:px-0">
                     <div
                         class="swiper rmsSwiper rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(30,58,138,0.4)] border border-blue-800/50">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img
-                                    src="https://placehold.co/1200x600/0f172a/60a5fa?text=RMS+Dashboard"
-                                    alt="RMS Dashboard"
-                                    class="w-full h-auto object-cover aspect-[16/9] md:aspect-[2/1]"></div>
-                            <div class="swiper-slide"><img
-                                    src="https://placehold.co/1200x600/0f172a/60a5fa?text=Smart+POS+%26+Billing"
-                                    alt="RMS POS" class="w-full h-auto object-cover aspect-[16/9] md:aspect-[2/1]">
+                            <div class="swiper-slide">
+                                <img src="./static/RMS1.png" alt="RMS Dashboard"
+                                    class="w-full h-auto object-cover aspect-[16/9]">
                             </div>
-                            <div class="swiper-slide"><img
-                                    src="https://placehold.co/1200x600/0f172a/60a5fa?text=Reservation+Calendar"
-                                    alt="RMS Calendar" class="w-full h-auto object-cover aspect-[16/9] md:aspect-[2/1]">
+                            <div class="swiper-slide">
+                                <img src="./static/RMS2.png" alt="RMS POS"
+                                    class="w-full h-auto object-cover aspect-[16/9]">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./static/RMS3.png" alt="RMS Calendar"
+                                    class="w-full h-auto object-cover aspect-[16/9]">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./static/RMS4.png" alt="RMS Calendar"
+                                    class="w-full h-auto object-cover aspect-[16/9]">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./static/RMS5.png" alt="RMS Calendar"
+                                    class="w-full h-auto object-cover aspect-[16/9]">
                             </div>
                         </div>
                         <div class="swiper-pagination rms-pagination mb-2"></div>
@@ -247,7 +255,7 @@
 
                 <h3 class="text-2xl font-semibold text-white mb-8 text-center">Resort Management System Core Features
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-12">
                     <div
                         class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-8 space-y-4 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300'>
                         <div
@@ -263,9 +271,8 @@
                         <ul class='text-sm leading-relaxed text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Flexible Tour Pricing (Day/Night rates).</li>
                             <li>Dynamic pricing for Regular, Child, Senior, & PWD.</li>
-                            <li>Split Billing for large groups.</li>
+                            <li>Split Billing & separate Add-on receipts.</li>
                             <li>Auto-calculated stay extensions.</li>
-                            <li>Barcode Scanner Ready for retail items.</li>
                         </ul>
                     </div>
 
@@ -285,8 +292,8 @@
                         <h3 class='font-semibold text-xl text-gray-100'>Reservation Calendar</h3>
                         <ul class='text-sm leading-relaxed text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Interactive visual booking calendar.</li>
-                            <li>Prevent double-bookings effortlessly.</li>
                             <li>Downpayment tracking & auto-balance calculation.</li>
+                            <li>Flexible rescheduling with optional fees.</li>
                             <li>Smart dashboard alerts for scheduled arrivals.</li>
                         </ul>
                     </div>
@@ -309,6 +316,7 @@
                             <li>Automated stock deduction upon billing.</li>
                             <li>Pulsing low stock alerts for admins.</li>
                             <li>Categorized management (Services, Rentables, Consumables).</li>
+                            <li>Barcode Scanner Ready for fast retail checkout.</li>
                         </ul>
                     </div>
 
@@ -325,31 +333,10 @@
                         </div>
                         <h3 class='font-semibold text-xl text-gray-100'>Shift & Cash Mgmt</h3>
                         <ul class='text-sm leading-relaxed text-gray-400 space-y-2 list-disc pl-4'>
-                            <li>Shift Locking requiring float declaration.</li>
+                            <li>Shift Locking requiring float/petty cash declaration.</li>
                             <li>Mid-Shift X-Reading for real-time snapshots.</li>
                             <li>End-of-Day Z-Reading forces cash count.</li>
                             <li>Calculates perfect balances, shortages, and overages.</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-8 space-y-4 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300'>
-                        <div
-                            class="bg-blue-900/40 p-3 rounded-lg inline-block text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                            </svg>
-                        </div>
-                        <h3 class='font-semibold text-xl text-gray-100'>Staff Management</h3>
-                        <ul class='text-sm leading-relaxed text-gray-400 space-y-2 list-disc pl-4'>
-                            <li>Strict role-based access control (Admin vs. Cashier).</li>
-                            <li>Secure employee directory & credentials.</li>
-                            <li>Performance tracking for staff accountability.</li>
                         </ul>
                     </div>
 
@@ -365,12 +352,34 @@
                                 <line x1="6" y1="20" x2="6" y2="14" />
                             </svg>
                         </div>
-                        <h3 class='font-semibold text-xl text-gray-100'>Analytics & Receipts</h3>
+                        <h3 class='font-semibold text-xl text-gray-100'>Analytics & Guest Data</h3>
                         <ul class='text-sm leading-relaxed text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Interactive charts for daily net revenue.</li>
+                            <li>Comprehensive Guest History & Transaction Logs.</li>
                             <li>One-click Excel export for accounting.</li>
-                            <li>Dynamic White-label Receipt Settings (Logo, VAT/TIN, Footer).</li>
-                            <li>Thermal Printer Integration (POS-58, POS-80, Network).</li>
+                            <li>Strict role-based access control (Admin vs. Cashier).</li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class='group bg-gradient-to-br from-slate-900 to-blue-950/80 border border-blue-800/30 rounded-xl p-8 space-y-4 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_12px_30px_rgba(30,58,138,0.4)] transition-all duration-300'>
+                        <div
+                            class="bg-blue-900/40 p-3 rounded-lg inline-block text-blue-400 group-hover:text-blue-300 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2">
+                                </path>
+                                <rect x="6" y="14" width="12" height="8"></rect>
+                            </svg>
+                        </div>
+                        <h3 class='font-semibold text-xl text-gray-100'>Hardware & Receipts</h3>
+                        <ul class='text-sm leading-relaxed text-gray-400 space-y-2 list-disc pl-4'>
+                            <li>Dynamic White-label Receipts (Logo, VAT/TIN, Footer).</li>
+                            <li>Thermal Printer Integration (USB & Network IP).</li>
+                            <li>Automatic Cash Drawer Kick via ESC/POS.</li>
+                            <li>Smart Multi-PC to Printer Routing over LAN.</li>
                         </ul>
                     </div>
                 </div>
@@ -434,6 +443,75 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="w-full flex flex-col items-center mt-8 pb-12">
+                    <h2 class="text-3xl font-semibold text-white mb-2 text-center">RMS Pricing Plans</h2>
+                    <p class="text-blue-400 text-center mb-10 max-w-2xl font-medium">Start with a 1 Month Free Trial</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+                        <div
+                            class="bg-slate-900 border border-slate-700 rounded-2xl p-8 flex flex-col items-center shadow-lg hover:border-blue-500/50 transition-all duration-300 relative text-left">
+                            <div class="w-full">
+                                <h3 class="text-xl font-semibold text-white mb-2">Monthly Plan</h3>
+                                <p class="text-slate-400 text-sm mb-6">Flexible billing for resorts</p>
+                                <div class="flex items-baseline gap-1 mb-6">
+                                    <span class="text-4xl font-bold text-white">₱2,499</span>
+                                    <span class="text-sm text-slate-400 font-medium">/month</span>
+                                </div>
+                                <ul class="text-sm text-slate-300 space-y-3 mb-8 w-full flex-grow">
+                                    <li class="flex items-center gap-3"><svg class="text-blue-500 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Full RMS Module Access</li>
+                                    <li class="flex items-center gap-3"><svg class="text-blue-500 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Real-Time Sync & Backup</li>
+                                </ul>
+                            </div>
+                            <a href="#"
+                                class="w-full py-3 px-6 rounded-full font-medium border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white transition-all text-center">Start
+                                Free Trial</a>
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-b from-blue-900 to-slate-900 border border-blue-500 rounded-2xl p-8 flex flex-col items-center shadow-[0_0_30px_rgba(37,99,235,0.2)] transform md:-translate-y-4 relative overflow-hidden text-left">
+                            <div
+                                class="absolute top-0 right-0 bg-blue-500 text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-10 shadow-md transform translate-x-8 translate-y-4 rotate-45">
+                                Best Value</div>
+                            <div class="w-full">
+                                <h3 class="text-xl font-semibold text-white mb-2">Yearly Plan</h3>
+                                <p class="text-blue-300 text-sm mb-6">Save ₱4,998 annually</p>
+                                <div class="flex items-baseline gap-1 mb-6">
+                                    <span class="text-4xl font-bold text-white">₱24,990</span>
+                                    <span class="text-sm text-blue-300 font-medium">/year</span>
+                                </div>
+                                <ul class="text-sm text-slate-200 space-y-3 mb-8 w-full flex-grow">
+                                    <li class="flex items-center gap-3"><svg class="text-blue-400 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Everything in Monthly Plan</li>
+                                    <li class="flex items-center gap-3"><svg class="text-blue-400 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Priority 24/7 Support</li>
+                                    <li class="flex items-center gap-3"><svg class="text-blue-400 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Free Remote Installation</li>
+                                </ul>
+                            </div>
+                            <a href="#"
+                                class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all text-center">Start
+                                Free Trial</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="pos" class="tab-content hidden w-full">
@@ -445,9 +523,9 @@
                     </p>
                 </div>
 
-                <div class="w-full max-w-5xl mx-auto mb-20 relative px-2 sm:px-0">
+                <div class="w-full max-w-5xl mx-auto mb-16 relative px-2 sm:px-0">
                     <div
-                        class="swiper posSwiper rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(30,58,138,0.4)] border border-blue-800/50">
+                        class="swiper posSwiper rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(16,185,129,0.2)] border border-emerald-800/50">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img
                                     src="https://placehold.co/1200x600/0f172a/10b981?text=Fast+Checkout+Interface"
@@ -468,19 +546,19 @@
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-white mb-8 text-center">Point of Sale Core Features</h3>
+                <h3 class="text-2xl font-semibold text-white mb-8 text-center">Core Features</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-20">
                     <div
-                        class='bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-emerald-500/50 transition-all'>
+                        class="bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
                         <h4 class='font-semibold text-xl text-gray-100 mb-3'>Advanced Order Logic</h4>
                         <ul class='text-sm text-gray-400 space-y-2 list-disc pl-4'>
-                            <li>Complex split-billing by guest or by item.</li>
+                            <li>Complex split-billing by guest or item.</li>
                             <li>Accurate Free of Charge (FOC) overrides.</li>
                             <li>Instant receipt reprinting module.</li>
                         </ul>
                     </div>
                     <div
-                        class='bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-emerald-500/50 transition-all'>
+                        class="bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
                         <h4 class='font-semibold text-xl text-gray-100 mb-3'>Hardware Integration</h4>
                         <ul class='text-sm text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Thermal printer ready (Network, USB).</li>
@@ -489,13 +567,83 @@
                         </ul>
                     </div>
                     <div
-                        class='bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-emerald-500/50 transition-all'>
+                        class="bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-emerald-500/50 transition-all">
                         <h4 class='font-semibold text-xl text-gray-100 mb-3'>Shift & Cash Mgmt</h4>
                         <ul class='text-sm text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Mid-Shift X-Reading snapshots.</li>
                             <li>End-of-Day Z-Reading generation.</li>
                             <li>Strict tracking of overages & shortages.</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="w-full flex flex-col items-center mt-8 pb-12">
+                    <h2 class="text-3xl font-semibold text-white mb-2 text-center">POS Pricing Plans</h2>
+                    <p class="text-emerald-400 text-center mb-10 max-w-2xl font-medium">Start with a 1 Month Free Trial
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+                        <div
+                            class="bg-slate-900 border border-slate-700 rounded-2xl p-8 flex flex-col items-center shadow-lg hover:border-emerald-500/50 transition-all duration-300 relative text-left">
+                            <div class="w-full">
+                                <h3 class="text-xl font-semibold text-white mb-2">Monthly Plan</h3>
+                                <p class="text-slate-400 text-sm mb-6">Ideal for single store locations</p>
+                                <div class="flex items-baseline gap-1 mb-6">
+                                    <span class="text-4xl font-bold text-white">₱1,499</span>
+                                    <span class="text-sm text-slate-400 font-medium">/month</span>
+                                </div>
+                                <ul class="text-sm text-slate-300 space-y-3 mb-8 w-full flex-grow">
+                                    <li class="flex items-center gap-3"><svg class="text-emerald-500 shrink-0"
+                                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Full POS Module Access</li>
+                                    <li class="flex items-center gap-3"><svg class="text-emerald-500 shrink-0"
+                                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Shift & Sales Analytics</li>
+                                </ul>
+                            </div>
+                            <a href="#"
+                                class="w-full py-3 px-6 rounded-full font-medium border border-emerald-600 text-emerald-400 hover:bg-emerald-600 hover:text-white transition-all text-center">Start
+                                Free Trial</a>
+                        </div>
+
+                        <div
+                            class="bg-gradient-to-b from-emerald-900/50 to-slate-900 border border-emerald-500 rounded-2xl p-8 flex flex-col items-center shadow-[0_0_30px_rgba(16,185,129,0.15)] transform md:-translate-y-4 relative overflow-hidden text-left">
+                            <div
+                                class="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-10 shadow-md transform translate-x-8 translate-y-4 rotate-45">
+                                Best Value</div>
+                            <div class="w-full">
+                                <h3 class="text-xl font-semibold text-white mb-2">Yearly Plan</h3>
+                                <p class="text-emerald-300 text-sm mb-6">Save ₱2,998 annually</p>
+                                <div class="flex items-baseline gap-1 mb-6">
+                                    <span class="text-4xl font-bold text-white">₱14,990</span>
+                                    <span class="text-sm text-emerald-300 font-medium">/year</span>
+                                </div>
+                                <ul class="text-sm text-slate-200 space-y-3 mb-8 w-full flex-grow">
+                                    <li class="flex items-center gap-3"><svg class="text-emerald-400 shrink-0"
+                                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Everything in Monthly Plan</li>
+                                    <li class="flex items-center gap-3"><svg class="text-emerald-400 shrink-0"
+                                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Priority Support</li>
+                                    <li class="flex items-center gap-3"><svg class="text-emerald-400 shrink-0"
+                                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Setup Assistance</li>
+                                </ul>
+                            </div>
+                            <a href="#"
+                                class="w-full py-3 px-6 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-medium shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all text-center">Start
+                                Free Trial</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -509,9 +657,9 @@
                     </p>
                 </div>
 
-                <div class="w-full max-w-5xl mx-auto mb-20 relative px-2 sm:px-0">
+                <div class="w-full max-w-5xl mx-auto mb-16 relative px-2 sm:px-0">
                     <div
-                        class="swiper hmsSwiper rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(30,58,138,0.4)] border border-blue-800/50">
+                        class="swiper hmsSwiper rounded-2xl overflow-hidden shadow-[0_12px_40px_rgba(168,85,247,0.2)] border border-purple-800/50">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img
                                     src="https://placehold.co/1200x600/0f172a/a855f7?text=Room+Matrix+Dashboard"
@@ -532,20 +680,19 @@
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-semibold text-white mb-8 text-center">Hotel Management System Core Features
-                </h3>
+                <h3 class="text-2xl font-semibold text-white mb-8 text-center">Core Features</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-20">
                     <div
-                        class='bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-purple-500/50 transition-all'>
+                        class="bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-purple-500/50 transition-all">
                         <h4 class='font-semibold text-xl text-gray-100 mb-3'>Front Desk Operations</h4>
                         <ul class='text-sm text-gray-400 space-y-2 list-disc pl-4'>
-                            <li>Visual Room Matrix (Clean, Dirty, Occupied).</li>
+                            <li>Visual Room Matrix (Clean, Dirty).</li>
                             <li>Quick Check-In / Check-Out workflows.</li>
                             <li>Keycard system integrations.</li>
                         </ul>
                     </div>
                     <div
-                        class='bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-purple-500/50 transition-all'>
+                        class="bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-purple-500/50 transition-all">
                         <h4 class='font-semibold text-xl text-gray-100 mb-3'>Guest Management</h4>
                         <ul class='text-sm text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Detailed Guest Profiles & History.</li>
@@ -554,7 +701,7 @@
                         </ul>
                     </div>
                     <div
-                        class='bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-purple-500/50 transition-all'>
+                        class="bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-purple-500/50 transition-all">
                         <h4 class='font-semibold text-xl text-gray-100 mb-3'>Housekeeping Module</h4>
                         <ul class='text-sm text-gray-400 space-y-2 list-disc pl-4'>
                             <li>Real-time room status updates.</li>
@@ -563,92 +710,78 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="w-full flex flex-col items-center mt-8">
-                <div
-                    class='px-5 py-1.5 border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider rounded-full mb-6 shadow-[0_0_15px_rgba(16,185,129,0.15)]'>
-                    All-Access Pass
-                </div>
-                <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4 text-center">Flexible Suite Pricing</h2>
-                <p class="text-gray-400 text-center mb-12 max-w-2xl">Deploy the modules you need. Start with our <span
-                        class="text-emerald-400 font-semibold">1 Month Free Trial</span> and experience the difference.
-                </p>
+                <div class="w-full flex flex-col items-center mt-8 pb-12">
+                    <h2 class="text-3xl font-semibold text-white mb-2 text-center">HMS Pricing Plans</h2>
+                    <p class="text-purple-400 text-center mb-10 max-w-2xl font-medium">Start with a 1 Month Free Trial
+                    </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-                    <div
-                        class="bg-slate-900 border border-slate-700 rounded-2xl p-8 flex flex-col items-center shadow-lg hover:border-slate-500 transition-all duration-300 relative overflow-hidden text-left">
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-white mb-2">Monthly Plan</h3>
-                            <p class="text-slate-400 text-sm mb-6">Perfect for scaling operations</p>
-
-                            <div class="flex items-baseline gap-1 mb-6">
-                                <span class="text-4xl font-bold text-white">₱1,999</span>
-                                <span class="text-sm text-slate-400 font-medium">/month</span>
-                            </div>
-
-                            <ul class="text-sm text-slate-300 space-y-3 mb-8 w-full flex-grow">
-                                <li class="flex items-center gap-3"><svg class="text-blue-500 shrink-0" width="16"
-                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Access to your chosen software</li>
-                                <li class="flex items-center gap-3"><svg class="text-blue-500 shrink-0" width="16"
-                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Real-Time Inventory Sync</li>
-                                <li class="flex items-center gap-3"><svg class="text-blue-500 shrink-0" width="16"
-                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Cloud Data Backup</li>
-                            </ul>
-                        </div>
-                        <a href="#"
-                            class="w-full py-3.5 px-6 rounded-full font-medium border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white transition-all duration-300 text-center">Start
-                            Free Trial</a>
-                    </div>
-
-                    <div
-                        class="bg-gradient-to-b from-blue-900 to-slate-900 border border-blue-500 rounded-2xl p-8 flex flex-col items-center shadow-[0_0_30px_rgba(37,99,235,0.2)] transform md:-translate-y-4 relative overflow-hidden text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
                         <div
-                            class="absolute top-0 right-0 bg-blue-500 text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-10 shadow-md transform translate-x-8 translate-y-4 rotate-45">
-                            Best Value</div>
-
-                        <div class="w-full">
-                            <h3 class="text-xl font-semibold text-white mb-2">Yearly Plan</h3>
-                            <p class="text-blue-300 text-sm mb-6">Save ₱3,998 annually (2 months free)</p>
-
-                            <div class="flex items-baseline gap-1 mb-6">
-                                <span class="text-4xl font-bold text-white">₱19,990</span>
-                                <span class="text-sm text-blue-300 font-medium">/year</span>
+                            class="bg-slate-900 border border-slate-700 rounded-2xl p-8 flex flex-col items-center shadow-lg hover:border-purple-500/50 transition-all duration-300 relative text-left">
+                            <div class="w-full">
+                                <h3 class="text-xl font-semibold text-white mb-2">Monthly Plan</h3>
+                                <p class="text-slate-400 text-sm mb-6">Built for expanding properties</p>
+                                <div class="flex items-baseline gap-1 mb-6">
+                                    <span class="text-4xl font-bold text-white">₱2,999</span>
+                                    <span class="text-sm text-slate-400 font-medium">/month</span>
+                                </div>
+                                <ul class="text-sm text-slate-300 space-y-3 mb-8 w-full flex-grow">
+                                    <li class="flex items-center gap-3"><svg class="text-purple-500 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Full HMS Module Access</li>
+                                    <li class="flex items-center gap-3"><svg class="text-purple-500 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Housekeeping Tracking</li>
+                                </ul>
                             </div>
-
-                            <ul class="text-sm text-slate-200 space-y-3 mb-8 w-full flex-grow">
-                                <li class="flex items-center gap-3"><svg class="text-blue-400 shrink-0" width="16"
-                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Everything in Monthly Plan</li>
-                                <li class="flex items-center gap-3"><svg class="text-blue-400 shrink-0" width="16"
-                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Priority 24/7 Technical Support</li>
-                                <li class="flex items-center gap-3"><svg class="text-blue-400 shrink-0" width="16"
-                                        height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg> Free Remote Installation & Setup</li>
-                            </ul>
+                            <a href="#"
+                                class="w-full py-3 px-6 rounded-full font-medium border border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white transition-all text-center">Start
+                                Free Trial</a>
                         </div>
-                        <a href="#"
-                            class="w-full py-3.5 px-6 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-medium shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-1 transition-all duration-300 text-center">Start
-                            Free Trial</a>
+
+                        <div
+                            class="bg-gradient-to-b from-purple-900/50 to-slate-900 border border-purple-500 rounded-2xl p-8 flex flex-col items-center shadow-[0_0_30px_rgba(168,85,247,0.15)] transform md:-translate-y-4 relative overflow-hidden text-left">
+                            <div
+                                class="absolute top-0 right-0 bg-purple-500 text-white text-[10px] font-bold uppercase tracking-wider py-1.5 px-10 shadow-md transform translate-x-8 translate-y-4 rotate-45">
+                                Best Value</div>
+                            <div class="w-full">
+                                <h3 class="text-xl font-semibold text-white mb-2">Yearly Plan</h3>
+                                <p class="text-purple-300 text-sm mb-6">Save ₱5,998 annually</p>
+                                <div class="flex items-baseline gap-1 mb-6">
+                                    <span class="text-4xl font-bold text-white">₱29,990</span>
+                                    <span class="text-sm text-purple-300 font-medium">/year</span>
+                                </div>
+                                <ul class="text-sm text-slate-200 space-y-3 mb-8 w-full flex-grow">
+                                    <li class="flex items-center gap-3"><svg class="text-purple-400 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Everything in Monthly Plan</li>
+                                    <li class="flex items-center gap-3"><svg class="text-purple-400 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Priority 24/7 Support</li>
+                                    <li class="flex items-center gap-3"><svg class="text-purple-400 shrink-0" width="16"
+                                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg> Free Remote Installation</li>
+                                </ul>
+                            </div>
+                            <a href="#"
+                                class="w-full py-3 px-6 bg-purple-600 hover:bg-purple-500 text-white rounded-full font-medium shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all text-center">Start
+                                Free Trial</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </main>
     </section>
 
@@ -674,19 +807,15 @@
         const tabContents = document.querySelectorAll('.tab-content');
         const mobileSelect = document.getElementById('mobile-tab-select');
 
-        // Central function to handle the switching
         function activateTab(targetId) {
-            // 1. Hide all content sections
             tabContents.forEach(c => {
                 c.classList.remove('block');
                 c.classList.add('hidden');
             });
 
-            // 2. Show the targeted content section
             document.getElementById(targetId).classList.remove('hidden');
             document.getElementById(targetId).classList.add('block');
 
-            // 3. Update styling on desktop buttons
             tabBtns.forEach(btn => {
                 if (btn.getAttribute('data-target') === targetId) {
                     btn.classList.remove('bg-slate-800/50', 'text-gray-400', 'border-slate-700', 'hover:bg-slate-800');
@@ -697,20 +826,17 @@
                 }
             });
 
-            // 4. Sync the mobile dropdown (in case they rotate their phone)
             if (mobileSelect) {
                 mobileSelect.value = targetId;
             }
         }
 
-        // Listen for clicks on Desktop Buttons
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 activateTab(btn.getAttribute('data-target'));
             });
         });
 
-        // Listen for changes on the Mobile Dropdown
         if (mobileSelect) {
             mobileSelect.addEventListener('change', (e) => {
                 activateTab(e.target.value);
@@ -751,7 +877,6 @@
         const overlay = document.getElementById('mobile-menu-overlay');
         const drawer = document.getElementById('mobile-menu-drawer');
 
-        // Function to open the drawer
         function openMenu() {
             overlay.classList.remove('opacity-0', 'pointer-events-none');
             overlay.classList.add('opacity-100', 'pointer-events-auto');
@@ -759,7 +884,6 @@
             drawer.classList.add('translate-x-0');
         }
 
-        // Function to close the drawer
         function closeMenu() {
             overlay.classList.remove('opacity-100', 'pointer-events-auto');
             overlay.classList.add('opacity-0', 'pointer-events-none');
@@ -767,12 +891,10 @@
             drawer.classList.add('translate-x-full');
         }
 
-        // Event Listeners
         openMenuBtn.addEventListener('click', openMenu);
         closeMenuBtn.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu); // Closes menu if user taps the dark background
+        overlay.addEventListener('click', closeMenu);
 
-        // Optional: Close menu when clicking a link inside it
         const mobileLinks = drawer.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', closeMenu);

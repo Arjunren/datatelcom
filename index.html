@@ -16,89 +16,79 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delay utilities for stagger effect */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
         /* Swiper continuous marquee effect */
         .swiper-wrapper {
             transition-timing-function: linear !important;
         }
 
-        /* Custom Entrance Animations */
+        /* Load Animations for Hero */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .animate-fade-up {
+        .animate-fade-up-hero {
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
         }
-
-        .delay-100 {
-            animation-delay: 100ms;
-        }
-
-        .delay-200 {
-            animation-delay: 200ms;
-        }
-
-        .delay-300 {
-            animation-delay: 300ms;
-        }
-
-        .swiper-wrapper {
-            transition-timing-function: linear !important;
-        }
+        .hero-delay-1 { animation-delay: 150ms; }
+        .hero-delay-2 { animation-delay: 300ms; }
+        .hero-delay-3 { animation-delay: 450ms; }
     </style>
 </head>
 
 <body class="bg-slate-950 text-slate-200 antialiased overflow-x-hidden selection:bg-blue-500/30">
 
-    <section
-        class="relative flex flex-col items-center bg-gradient-to-b from-slate-950 via-slate-900 to-blue-950 min-h-screen pb-20">
+    <section class="relative flex flex-col items-center bg-gradient-to-b from-slate-950 via-slate-900 to-blue-950 min-h-screen pb-20">
 
         <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gridPatternBg.svg" alt=""
             aria-hidden="true"
-            class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-screen">
+            class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none mix-blend-screen z-0">
 
-        <header
+        <header id="main-header"
             class="fixed top-0 left-0 w-full z-[100] bg-slate-950/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
             <nav class="flex items-center justify-between px-6 md:px-12 lg:px-24 py-4 max-w-screen-2xl mx-auto w-full">
                 <a href="https://datatelcom.pythonanywhere.com"
                     class="text-2xl font-bold text-white tracking-wide z-50 flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <div
-                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <circle cx="5" cy="12" r="2" stroke-width="2" />
                             <circle cx="19" cy="5" r="2" stroke-width="2" />
                             <circle cx="19" cy="19" r="2" stroke-width="2" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M7 12h10M17 7l-6 4 6 4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12h10M17 7l-6 4 6 4" />
                         </svg>
                     </div>
                     Datatelcom
                 </a>
 
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="./index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+                    <a href="./index.html" class="text-blue-400 hover:text-blue-300 transition-colors">Home</a>
                     <a href="./services.html" class="text-slate-300 hover:text-white transition-colors">Services</a>
                     <a href="./software.html" class="text-slate-300 hover:text-white transition-colors">Software</a>
                     <a href="./clients.html" class="text-slate-300 hover:text-white transition-colors">Clients</a>
                     <a href="./contact.html"
-                        class="text-white bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full transition-all shadow-lg shadow-blue-500/20 ml-2">Contact
-                        Us</a>
+                        class="text-white bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)] ml-2 hover:-translate-y-0.5">Contact Us</a>
                 </div>
 
-                <button id="open-menu"
-                    class="md:hidden bg-white/5 border border-white/10 hover:bg-white/10 text-white p-2.5 rounded-lg transition"
-                    aria-label="Open Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <button id="open-menu" class="md:hidden bg-white/5 border border-white/10 hover:bg-white/10 text-white p-2.5 rounded-lg transition" aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 12h16" />
                         <path d="M4 18h16" />
                         <path d="M4 6h16" />
@@ -107,20 +97,13 @@
             </nav>
         </header>
 
-        <div id="mobile-menu-overlay"
-            class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[101] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
-        </div>
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[101] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
 
-        <aside id="mobile-menu-drawer"
-            class="fixed top-0 right-0 h-full w-[85vw] max-w-[360px] bg-slate-900 border-l border-white/5 z-[102] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden shadow-2xl">
-
+        <aside id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-[85vw] max-w-[360px] bg-slate-900 border-l border-white/5 z-[102] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col md:hidden shadow-2xl">
             <div class="flex items-center justify-between px-6 py-5 border-b border-white/5">
                 <span class="text-lg font-bold text-white tracking-wide">Menu</span>
-                <button id="close-menu"
-                    class="bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 p-2 rounded-full transition-colors aspect-square"
-                    aria-label="Close Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <button id="close-menu" class="bg-white/5 hover:bg-white/10 border border-white/5 text-slate-300 p-2 rounded-full transition-colors aspect-square" aria-label="Close Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M18 6 6 18" />
                         <path d="m6 6 12 12" />
                     </svg>
@@ -128,19 +111,14 @@
             </div>
 
             <div class="flex flex-col px-6 py-8 gap-6 flex-1 overflow-y-auto">
-                <a href="./index.html"
-                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Home</a>
-                <a href="./services.html"
-                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Services</a>
-                <a href="./software.html"
-                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Software</a>
-                <a href="./clients.html"
-                    class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Clients</a>
+                <a href="./index.html" class="text-2xl font-semibold text-blue-400 transition-colors">Home</a>
+                <a href="./services.html" class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Services</a>
+                <a href="./software.html" class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Software</a>
+                <a href="./clients.html" class="text-2xl font-semibold text-slate-300 hover:text-white transition-colors">Clients</a>
             </div>
 
             <div class="p-6 border-t border-white/5 bg-slate-950/30">
-                <a href="./contact.html"
-                    class="flex justify-center items-center w-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-5 py-3.5 rounded-xl font-medium transition-all shadow-lg shadow-blue-500/25">
+                <a href="./contact.html" class="flex justify-center items-center w-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-5 py-3.5 rounded-xl font-medium transition-all shadow-lg shadow-blue-500/25">
                     Get in touch
                 </a>
             </div>
@@ -148,79 +126,66 @@
 
         <main class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 mt-32 md:mt-40 flex justify-center">
 
-            <!-- HERO -->
             <div class="flex flex-col items-center text-center max-w-3xl">
 
-                <h1
-                    class="animate-fade-up text-4xl md:text-6xl font-bold leading-tight tracking-tight bg-gradient-to-br from-white via-blue-100 to-slate-400 text-transparent bg-clip-text">
+                <h1 class="animate-fade-up-hero text-4xl md:text-6xl font-bold leading-tight tracking-tight bg-gradient-to-br from-white via-blue-100 to-slate-400 text-transparent bg-clip-text">
                     Connect. Communicate. Secure.
                     <span class="block bg-gradient-to-r from-blue-400 to-indigo-400 text-transparent bg-clip-text">
                         Without the downtime.
                     </span>
                 </h1>
 
-                <p class="animate-fade-up delay-100 text-slate-300 mt-6 text-lg leading-relaxed">
+                <p class="animate-fade-up-hero hero-delay-1 text-slate-300 mt-6 text-lg leading-relaxed">
                     We design, deploy, and manage enterprise-grade telecom and infrastructure systems that keep your
                     business always connected and always secure.
                 </p>
 
-                <!-- CTA GROUP -->
-                <div class="animate-fade-up delay-200 flex flex-wrap justify-center gap-4 mt-8">
-
-                    <a href="./contact.html"
-                        class="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-7 py-3.5 rounded-full font-medium transition-all shadow-lg hover:shadow-blue-500/40 hover:-translate-y-1">
+                <div class="animate-fade-up-hero hero-delay-2 flex flex-wrap justify-center gap-4 mt-8">
+                    <a href="./contact.html" class="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-8 py-4 rounded-full font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:-translate-y-1">
                         Get in touch
-                        <svg class="group-hover:translate-x-1 transition" width="18" height="18" fill="none"
-                            stroke="currentColor">
+                        <svg class="group-hover:translate-x-1 transition" width="18" height="18" fill="none" stroke="currentColor">
                             <path d="M5 9h8m0 0-3-3m3 3-3 3" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </a>
-
-                    <a href="./services.html"
-                        class="px-7 py-3.5 rounded-full border border-white/10 hover:bg-white/5 text-slate-300 hover:text-white transition">
+                    <a href="./services.html" class="px-8 py-4 rounded-full border border-slate-600 hover:bg-slate-800 text-slate-300 hover:text-white transition">
                         View Services
                     </a>
-
                 </div>
 
-                <!-- EMAIL CARD -->
-                <div
-                    class="animate-fade-up delay-300 mt-10 w-full max-w-md bg-slate-900/70 backdrop-blur-md border border-white/5 rounded-xl px-4 py-3 flex items-center gap-3 justify-between">
-
-                    <span class="text-blue-400 text-sm">Email:</span>
-
-                    <span id="copy-text" class="text-sm truncate text-center flex-1">
-                        datatelcom.customercare@gmail.com
-                    </span>
-                </div>
+                <button onclick="copyEmail()" class="animate-fade-up-hero hero-delay-3 mt-12 w-full max-w-md bg-slate-900/60 hover:bg-slate-800/80 backdrop-blur-md border border-slate-700/50 hover:border-blue-500/50 rounded-xl px-5 py-3.5 flex items-center gap-3 justify-between group transition-all cursor-pointer shadow-lg">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <span id="copy-text" class="text-sm font-medium text-slate-300 group-hover:text-white transition-colors tracking-wide">
+                            datatelcom.customercare@gmail.com
+                        </span>
+                    </div>
+                    <svg class="text-slate-500 group-hover:text-blue-400 transition-colors opacity-0 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                </button>
 
             </div>
-
         </main>
     </section>
 
-
     <section id="about" class="relative py-24 px-6 overflow-hidden">
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none">
+        
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none">
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <div class="animate-fade-up">
-                    <div
-                        class="inline-flex items-center gap-2 px-4 py-1.5 border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-semibold uppercase tracking-widest rounded-full mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-semibold uppercase tracking-widest rounded-full mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
                         <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                         </span>
                         Who We Are
                     </div>
 
-                    <h2
-                        class="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 leading-tight tracking-tight">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6 leading-tight tracking-tight">
                         Empowering connectivity for the modern enterprise.
                     </h2>
 
@@ -233,159 +198,91 @@
 
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-start gap-3 text-slate-300">
-                            <div class="mt-1 bg-blue-500/20 p-1 rounded-full text-blue-400">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 6 9 17l-5-5" />
-                                </svg>
+                            <div class="mt-1 bg-blue-500/20 p-1.5 rounded-md text-blue-400">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
-                            <span class="leading-relaxed">Proven expertise in structured cabling & secure
-                                networking.</span>
+                            <span class="leading-relaxed">Proven expertise in structured cabling & secure networking.</span>
                         </li>
                         <li class="flex items-start gap-3 text-slate-300">
-                            <div class="mt-1 bg-blue-500/20 p-1 rounded-full text-blue-400">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 6 9 17l-5-5" />
-                                </svg>
+                            <div class="mt-1 bg-blue-500/20 p-1.5 rounded-md text-blue-400">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
-                            <span class="leading-relaxed">Advanced security, surveillance, and PABX voice
-                                integrations.</span>
+                            <span class="leading-relaxed">Advanced security, surveillance, and PABX voice integrations.</span>
                         </li>
                         <li class="flex items-start gap-3 text-slate-300">
-                            <div class="mt-1 bg-blue-500/20 p-1 rounded-full text-blue-400">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 6 9 17l-5-5" />
-                                </svg>
+                            <div class="mt-1 bg-blue-500/20 p-1.5 rounded-md text-blue-400">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
-                            <span class="leading-relaxed">Custom hardware sensors & management software solutions (POS,
-                                HMS).</span>
+                            <span class="leading-relaxed">Custom hardware sensors & management software solutions (POS, HMS).</span>
                         </li>
                     </ul>
 
-                    <a href="./services.html"
-                        class="inline-flex items-center gap-2 text-blue-400 font-medium hover:text-blue-300 transition-colors group">
+                    <a href="./services.html" class="inline-flex items-center gap-2 text-blue-400 font-medium hover:text-blue-300 transition-colors group">
                         Explore our full capabilities
-                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </a>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4 sm:gap-6 animate-fade-up delay-200">
-
-                    <div
-                        class="bg-slate-900 border border-slate-800 p-6 rounded-2xl transform lg:translate-y-8 shadow-xl hover:border-slate-700 transition-colors">
-                        <div
-                            class="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <polyline points="16 11 18 13 22 9" />
-                            </svg>
+                <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                    <div class="reveal delay-100 group bg-slate-900 border border-slate-800 p-6 rounded-2xl transform lg:translate-y-8 shadow-lg hover:border-blue-500/50 hover:bg-slate-800/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><polyline points="16 11 18 13 22 9" /></svg>
                         </div>
                         <h3 class="text-3xl font-bold text-white mb-1">127+</h3>
                         <p class="text-sm text-slate-400 font-medium">Clients Secured</p>
                     </div>
 
-                    <div
-                        class="bg-gradient-to-br from-blue-900/40 to-indigo-900/40 border border-blue-700/50 p-6 rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.15)] relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-4 opacity-20 pointer-events-none">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                            </svg>
+                    <div class="reveal delay-200 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 border border-blue-700/50 p-6 rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.15)] relative overflow-hidden group hover:border-blue-400 transition-all duration-300">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
                         </div>
-                        <div
-                            class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-300 mb-4 relative z-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                            </svg>
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-300 mb-4 relative z-10 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
                         </div>
                         <h3 class="text-3xl font-bold text-white mb-1 relative z-10">99.9%</h3>
                         <p class="text-sm text-blue-200 font-medium relative z-10">System Uptime</p>
                     </div>
 
-                    <div
-                        class="bg-slate-900 border border-slate-800 p-6 rounded-2xl transform lg:translate-y-8 shadow-xl hover:border-slate-700 transition-colors">
-                        <div
-                            class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="m12 14 4-4" />
-                                <path d="M3.34 19a10 10 0 1 1 17.32 0" />
-                            </svg>
+                    <div class="reveal delay-200 group bg-slate-900 border border-slate-800 p-6 rounded-2xl transform lg:translate-y-8 shadow-lg hover:border-emerald-500/50 hover:bg-slate-800/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-xl flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>
                         </div>
                         <h3 class="text-3xl font-bold text-white mb-1">24/7</h3>
                         <p class="text-sm text-slate-400 font-medium">Technical Support</p>
                     </div>
 
-                    <div
-                        class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl hover:border-slate-700 transition-colors">
-                        <div
-                            class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" />
-                            </svg>
+                    <div class="reveal delay-300 group bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg hover:border-purple-500/50 hover:bg-slate-800/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 mb-4 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16" /></svg>
                         </div>
                         <h3 class="text-3xl font-bold text-white mb-1">Tailored</h3>
                         <p class="text-sm text-slate-400 font-medium">Hardware & Software</p>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PARTNERS -->
     <section class="pb-24 px-6">
-
-        <p class="text-center text-xs font-semibold text-slate-500 uppercase tracking-[0.25em] mb-10">
+        <p class="reveal text-center text-xs font-semibold text-slate-500 uppercase tracking-[0.25em] mb-10">
             Trusted Partners & Technologies
         </p>
 
-        <div class="relative max-w-6xl mx-auto overflow-hidden">
+        <div class="reveal delay-100 relative max-w-6xl mx-auto overflow-hidden">
+            <div class="pointer-events-none absolute left-0 top-0 h-full w-32 z-10 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+            <div class="pointer-events-none absolute right-0 top-0 h-full w-32 z-10 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent"></div>
+            <div class="pointer-events-none absolute inset-0 z-[5] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05),transparent_70%)]"></div>
 
-            <!-- LEFT FADE -->
-            <div class="pointer-events-none absolute left-0 top-0 h-full w-32 z-10 
-                    bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent">
-            </div>
-
-            <!-- RIGHT FADE -->
-            <div class="pointer-events-none absolute right-0 top-0 h-full w-32 z-10 
-                    bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent">
-            </div>
-
-            <!-- CENTER GLOW -->
-            <div class="pointer-events-none absolute inset-0 z-[5] 
-                    bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_70%)]">
-            </div>
-
-            <!-- SWIPER -->
             <div class="swiper partnerSwiper">
                 <div class="swiper-wrapper items-center" id="logo-container"></div>
             </div>
-
         </div>
-
     </section>
 
     <footer class="w-full bg-slate-950 border-t border-slate-800/50 relative z-10">
-        <div
-            class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400 gap-4">
+        <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between text-sm text-slate-400 gap-4">
             <p>
-                <a href="https://datatelcom.pythonanywhere.com"
-                    class="text-slate-200 font-semibold hover:text-blue-400 transition-colors">
+                <a href="https://datatelcom.pythonanywhere.com" class="text-slate-200 font-semibold hover:text-blue-400 transition-colors">
                     Datatelcom System Communication
                 </a>
                 &copy; 2026. All rights reserved.
@@ -400,7 +297,49 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // LOGOS
+        // 1. CLICK-TO-COPY EMAIL FUNCTIONALITY
+        function copyEmail() {
+            const email = 'datatelcom.customercare@gmail.com';
+            const copyTextElement = document.getElementById('copy-text');
+            
+            navigator.clipboard.writeText(email).then(() => {
+                copyTextElement.innerHTML = `<span class="text-emerald-400 font-bold flex items-center gap-1">✓ Copied to clipboard!</span>`;
+                setTimeout(() => {
+                    copyTextElement.innerHTML = email;
+                }, 2500);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        // 2. HEADER SCROLL EFFECT (Glassmorphism & Shadow on scroll)
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('bg-slate-950/90', 'shadow-[0_4px_30px_rgba(0,0,0,0.5)]');
+                header.classList.remove('bg-slate-950/80');
+            } else {
+                header.classList.remove('bg-slate-950/90', 'shadow-[0_4px_30px_rgba(0,0,0,0.5)]');
+                header.classList.add('bg-slate-950/80');
+            }
+        });
+
+        // 3. SCROLL REVEAL ANIMATION OBSERVER
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 4. LOGOS FOR SWIPER
         const logos = [
             "HIKVISION", "NEC", "SIEMENS", "TP-Link",
             "APC", "Emerson", "CISCO", "Yeastar", "Dahua"
@@ -411,14 +350,14 @@
         logos.forEach(name => {
             container.innerHTML += `
                     <div class="swiper-slide !w-auto px-10">
-                        <div class="text-slate-500 text-xl font-semibold tracking-wide opacity-40 hover:opacity-100 hover:scale-110 transition duration-500">
+                        <div class="text-slate-500 text-xl font-semibold tracking-wide opacity-40 hover:opacity-100 hover:text-white hover:scale-110 transition-all duration-500 cursor-default">
                             ${name}
                         </div>
                     </div>
                 `;
         });
 
-        // SWIPER
+        // 5. SWIPER INITIALIZATION
         new Swiper('.partnerSwiper', {
             loop: true,
             slidesPerView: 'auto',
@@ -431,13 +370,12 @@
             },
         });
 
-        // --- MOBILE MENU DRAWER LOGIC ---
+        // 6. MOBILE MENU DRAWER LOGIC
         const openMenuBtn = document.getElementById('open-menu');
         const closeMenuBtn = document.getElementById('close-menu');
         const overlay = document.getElementById('mobile-menu-overlay');
         const drawer = document.getElementById('mobile-menu-drawer');
 
-        // Function to open the drawer
         function openMenu() {
             overlay.classList.remove('opacity-0', 'pointer-events-none');
             overlay.classList.add('opacity-100', 'pointer-events-auto');
@@ -445,7 +383,6 @@
             drawer.classList.add('translate-x-0');
         }
 
-        // Function to close the drawer
         function closeMenu() {
             overlay.classList.remove('opacity-100', 'pointer-events-auto');
             overlay.classList.add('opacity-0', 'pointer-events-none');
@@ -453,12 +390,10 @@
             drawer.classList.add('translate-x-full');
         }
 
-        // Event Listeners
         openMenuBtn.addEventListener('click', openMenu);
         closeMenuBtn.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu); // Closes menu if user taps the dark background
+        overlay.addEventListener('click', closeMenu);
 
-        // Optional: Close menu when clicking a link inside it
         const mobileLinks = drawer.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
